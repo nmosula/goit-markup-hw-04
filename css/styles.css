@@ -127,11 +127,13 @@ h1, h2, h3, h4, h5, h6, p, ul {
 .nav-contact a:link,
 .nav a:visited {
    color: var(--ws-grey);
+   fill: currentColor;
 }
 
 .nav-contact a:focus,
 .nav-contact a:hover {
    color: var(--ws-blue);
+   fill: currentColor;
 }
 
 .contact-email,
@@ -143,12 +145,6 @@ h1, h2, h3, h4, h5, h6, p, ul {
 
 .nav-contact .icon {
    margin-right: 10px;
-   fill: var(--ws-grey);
-}
-
-.nav-contact a:focus .icon, 
-.nav-contact a:hover .icon {
-   fill: var(--ws-blue);
 }
 
  /* hero css*/
@@ -228,10 +224,13 @@ h1, h2, h3, h4, h5, h6, p, ul {
 }
 
 .feature-list-item .icon {
-   display: block;
+   display: flex;
+   align-items: center;
+   justify-content: center;
    background-color: var(--ws-lightgrey);
    border-radius: 4px;  
-   padding: 20px 100px;
+   width: 270px;
+   height: 120px;
    margin-bottom: 30px;
 }
 
@@ -313,12 +312,13 @@ h1, h2, h3, h4, h5, h6, p, ul {
 }
 
 .our-team-list-item .social-link {
+   display: flex;
+   align-items: center;
+   justify-content: center;
    width: 44px;
    height: 44px;
-   padding: 12px;
-   border: none;
-   fill: var(--ws-social-link);
-   background-color: transparent;
+   color: var(--ws-social-link);
+   fill: currentColor;
 }
 
 .our-team-list-item .social-links li:not(:last-child) {
@@ -328,38 +328,44 @@ h1, h2, h3, h4, h5, h6, p, ul {
 .our-team-list-item .social-link:hover, 
 .our-team-list-item .social-link:focus {
    border-radius: 50%;
-   fill: var(--ws-main-bgcolor);
    background-color: var(--ws-blue);
+   fill: var(--ws-main-bgcolor);
    cursor: pointer;
 }
 
 /* our clients*/
 
-.our-clients-list-item {
+.our-clients-list li:not(:last-child) {
+   margin-right: 30px;
+}
+
+.our-client-item {
+   display: flex;
+   align-items: center;
+   justify-content: center;
    width: 170px;
-   padding: 16px 32px;
+   height: 92px;
+   color: var(--ws-social-link);
    border: 1px solid var(--ws-social-link);
    border-radius: 4px;
    cursor:pointer;
 }
 
-.our-clients-list-item:not(:last-child) {
-   margin-right: 30px;
+.our-client-item .client-logo {
+   fill: currentColor;
 }
 
-.our-clients-list-item .client-logo {
-   fill: var(--ws-social-link);
-}
-
-.our-clients-list-item:focus,
-.our-clients-list-item:hover {
+.our-client-item:hover,
+.our-client-item:focus {
+   color: var(--ws-blue);
    border: 1px solid var(--ws-blue);
 }
 
-.our-clients-list-item:focus .client-logo,
-.our-clients-list-item:hover .client-logo {
-   fill: var(--ws-blue);
+.our-client-item:hover .client-logo,
+.our-client-item:focus .client-logo {
+   fill: currentColor;
 }
+
 
 /* portfolio section*/
 
@@ -413,20 +419,23 @@ h1, h2, h3, h4, h5, h6, p, ul {
 
 .our-portfolio-list-item {
    width: 370px;
-   border: 1px solid var(--ws-border-line);
 }
 
-.our-portfolio-list-item:hover,
-.our-portfolio-list-item:focus {
+.our-portfolio-list-item a:hover,
+.our-portfolio-list-item a:focus {
    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .our-portfolio-list-item a:link,
 .our-portfolio-list-item a:focus {
+   display: block;
    text-decoration: none;
 }
 
 .our-portfolio-list-item .our-portfolio-title {
+   border-left: 1px solid var(--ws-border-line);
+   border-right: 1px solid var(--ws-border-line);
+   border-bottom: 1px solid var(--ws-border-line);
    padding: 20px 24px;
 }
 
@@ -460,6 +469,7 @@ h1, h2, h3, h4, h5, h6, p, ul {
 
 .footer-pages {
    display: flex;
+   align-items: baseline;
 }
 
 .footer-address {
@@ -522,10 +532,11 @@ h1, h2, h3, h4, h5, h6, p, ul {
 }
 
 .footer-social-links .social-link {
-   text-align: center;
+   display: flex;
+   align-items: center;
+   justify-content: center;
    width: 44px;
    height: 44px;
-   padding: 12px;
    border: none;
    fill: var(--ws-main-bgcolor);
    border-radius: 50%;
@@ -538,8 +549,6 @@ h1, h2, h3, h4, h5, h6, p, ul {
 
 .footer-social-links .social-link:hover,
 .footer-social-links .social-link:focus {
-   border-radius: 50%;
    fill: var(--ws-main-bgcolor);
    background-color: var(--ws-blue);
-   cursor: pointer;
 }
